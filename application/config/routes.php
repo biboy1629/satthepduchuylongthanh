@@ -80,6 +80,11 @@ $route['admin/danh-sach-san-pham.html'] = 'admin/admin/list_san_pham';
 $route['admin/danh-sach-user.html'] = 'admin/admin/danh_sach';
 $route['admin/them-moi-user.html'] = 'admin/admin/user_add';
 $route['admin/them-bai-moi.html'] = 'admin/admin/add_new_post';
+
+$route['admin/danh-sach-san-pham.html'] = 'admin/sanpham/index';
+$route['admin/them-moi-san-pham.html'] = 'admin/sanpham/them_moi_san_pham';
+$route['admin/sua-san-pham/(:any)'] = 'admin/sanpham/chinh_sua_san_pham';
+
 $route['admin/logout.html'] = 'admin/admin/logout';
 $route['admin/login.html'] = 'admin/admin/login';
 

@@ -19,7 +19,6 @@ class Admin extends MY_Controller{
         $this->data['data'] = array();
         $this->load->view('admin/layout',$this->data);
         
-        
     }
     function danh_sach($input = array()){
         if($this->check_login()){
