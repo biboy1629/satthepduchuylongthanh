@@ -20,15 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1426be2f-e1b7-4b66-a670-eebaf4e87384" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/controllers/admin/Sanpham.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admin/admin/product_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/admin/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/admin/Sanpham.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/Sanpham.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Sanpham_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Sanpham_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/admin/admin/products_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/admin/products_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/admin/products_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/admin/products_list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/admin/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/layout.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +60,15 @@
       <workItem from="1600481812317" duration="4542000" />
       <workItem from="1600496673537" duration="595000" />
       <workItem from="1600654492822" duration="1675000" />
-      <workItem from="1603809382412" duration="3827000" />
+      <workItem from="1603809382412" duration="4424000" />
+      <workItem from="1603824068910" duration="924000" />
+      <workItem from="1603849768210" duration="506000" />
+      <workItem from="1603850921428" duration="1001000" />
+      <workItem from="1603893837607" duration="8752000" />
+      <workItem from="1603937772067" duration="225000" />
+      <workItem from="1604249709097" duration="2674000" />
+      <workItem from="1604331294261" duration="1189000" />
+      <workItem from="1604410934916" duration="5392000" />
     </task>
     <servers />
   </component>
@@ -82,6 +85,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2460" y="135" key="NewPhpClassDialog" timestamp="1603810510912">

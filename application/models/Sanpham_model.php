@@ -8,4 +8,7 @@ class Sanpham_model extends MY_Model {
         $query = $this->db->get($this->table);
         return $query->row();
     }
+    function get_all_product(){
+        return $this->get_list();
+    }
 }
