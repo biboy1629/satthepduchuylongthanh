@@ -22,9 +22,9 @@
     <list default="true" id="1426be2f-e1b7-4b66-a670-eebaf4e87384" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/admin/Sanpham.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/Sanpham.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Sanpham_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Sanpham_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/admin/admin/products_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/admin/products_add.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/admin/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ckfinder/core/connector/php/vendor/cksource/ckfinder" beforeDir="false" afterPath="$PROJECT_DIR$/public/ckfinder/core/connector/php/vendor/cksource/ckfinder" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,7 @@
       <workItem from="1603937772067" duration="225000" />
       <workItem from="1604249709097" duration="2674000" />
       <workItem from="1604331294261" duration="1189000" />
-      <workItem from="1604410934916" duration="5392000" />
+      <workItem from="1604410934916" duration="9924000" />
     </task>
     <servers />
   </component>

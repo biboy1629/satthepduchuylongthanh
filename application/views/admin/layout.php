@@ -399,16 +399,16 @@
 
 </html>
 <script>
-    $("#gia_cu_the").show();
-    $("#gia_lien_he").hide();
-    $("#selec_gia").change(function(){
-        var a = $(this).val();
-        if(a==1){
-            $("#gia_cu_the").show();
-            $("#gia_lien_he").hide();
-        }else{
-            $("#gia_cu_the").hide();
-            $("#gia_lien_he").show();
-        }
-    });
+    // $("#gia_cu_the").show();
+    // $("#gia_lien_he").hide();
+    // $("#selec_gia").change(function(){
+    //     var a = $(this).val();
+    //     if(a==1){
+    //         $("#gia_cu_the").show();
+    //         $("#gia_lien_he").hide();
+    //     }else{
+    //         $("#gia_cu_the").hide();
+    //         $("#gia_lien_he").show();
+    //     }
+    // });
 </script>
