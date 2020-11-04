@@ -11,4 +11,5 @@ class Sanpham_model extends MY_Model {
     function get_all_product(){
         return $this->get_list();
     }
+
 }

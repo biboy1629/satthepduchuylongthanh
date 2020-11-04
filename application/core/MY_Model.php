@@ -14,7 +14,7 @@ class MY_Model extends CI_Model{
     
     /*them moi row*/
     function create($data = array()){
-        
+
         if($this->db->insert($this->table,$data)){
             return $this->db->insert_id();
         }else{
@@ -121,7 +121,7 @@ class MY_Model extends CI_Model{
             $order = ($this->order == '') ? array($this->table.'.'.$this->key,'desc'):$this->order;
             $this->db->order_by($order[0], $order[1]);
         }
-        
+
         // them limit
         // example $input['limit'] = array('10','0');
         if(isset($input['limit'][0]) && isset($input['limit'][1])){

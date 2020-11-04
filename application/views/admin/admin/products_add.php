@@ -3,16 +3,28 @@
 <script src="<?php echo base_url("public/ckfinder")?>/ckfinder.js"></script>
 <div class="container-fluid">
 
-    <?php echo validation_errors(); ?>
+    <?php echo "<p style='color: #aa1111'>".validation_errors()."</p>"; ?>
+    <?php echo "<p style='color: #aa1111'>".$_SESSION['message']."</p>"; ?>
 
     <form method="post" enctype="multipart/form-data" action="them-moi-san-pham.html">
         <div class="form-group">
-            <label for="usr">Tên Sản Phẩm(*): <?php echo validation_errors("Name"); ?></label>
-            <input type="text" class="form-control" name="Name" id="usr" value="">
+            <label for="usr">Tên Sản Phẩm(*): <?php echo "<p style='color: #aa1111'>".validation_errors("Name")."</p>"; ?></label>
+            <input type="text" class="form-control" name="Name" id="usr" >
         </div>
         <div class="form-group">
-            <label for="usr">Mã Sản Phẩm(*): <?php echo validation_errors("SKU"); ?></label>
-            <input type="text" class="form-control" name="SKU" id="usr" value="">
+            <label for="usr">Mã Sản Phẩm(*): <?php echo "<p style='color: #aa1111'>".validation_errors("SKU")."</p>"; ?></label>
+            <input type="text" class="form-control" name="SKU" id="usr" >
+        </div>
+        <div class="form-group">
+            <label for="pwd">Loại Sản Phẩm(*):</label>
+            <select name="Loai_san_pham"  class="form-control col-md-3" id="danh_muc">
+                <?php
+                foreach ($loai_san_pham as $item){
+
+                    echo "<option value=".$item->ID.">".$item->Name."</option>";
+               };?>
+            </select>
+
         </div>
 
         <div class="form-group">

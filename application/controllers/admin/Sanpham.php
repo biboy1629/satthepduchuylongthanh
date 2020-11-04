@@ -7,6 +7,7 @@ class Sanpham extends MY_Controller
         parent::__construct();
         $this->load->helper('admin');
         $this->load->model('sanpham_model');
+        $_SESSION['message'] = '';
     }
 
     function index(){
@@ -17,13 +18,14 @@ class Sanpham extends MY_Controller
         $this->load->view('admin/layout',$this->data);
     }
     function them_moi_san_pham(){
+
         $this->load->library('form_validation');
 
         try {
+
             if($this->input->post()){
 
-                $this->form_validation->set_rules('Name', 'Username', 'required');
-                $this->form_validation->set_rules('SKU', 'Password', 'required');
+
 
                 if ($this->form_validation->run() == FALSE)
                 {
@@ -34,7 +36,8 @@ class Sanpham extends MY_Controller
                     $this->load->library('upload',$config);
                     if(!$this->upload->do_upload('Images')){
                         $upload = $this->upload->display_errors();
-                        throw new Exception("can not upload file");
+                        $_SESSION['message'] = '<p style="color: #aa1111"> Upload hình không thành công </p>';
+//                        throw new Exception("can not upload file");
                     }else{
                         $upload = $this->upload->data();
 
@@ -43,10 +46,15 @@ class Sanpham extends MY_Controller
                             'SKU' => $this->input->post("SKU"),
                             'Price' => $this->input->post("Price"),
                             'Description' => $this->input->post("Description"),
+                            'Loai_san_pham' => $this->input->post("Loai_san_pham"),
                             'Images' => $upload["file_name"],
                         );
                         $result = $this->sanpham_model->create($sanpham);
-                        var_dump($result);die;
+                        if($result){
+                            $_SESSION['message'] = '<p style="color: #1e7e34"> Upload thành công </p>';
+                        }else{
+                            $_SESSION['message'] = '<p style="color: #aa1111"> Upload không thành công </p>';
+                        }
                     }
 
                 }
@@ -54,10 +62,15 @@ class Sanpham extends MY_Controller
 
 
             }
+            $this->load->model("loaisanpham_model");
+            $this->data['data'] = array();
+
 
             $this->data  = array();
             $this->data['temp'] = 'admin/admin/products_add';
-            $this->data['data'] = array();
+            $this->data['loai_san_pham'] = $this->loaisanpham_model->get_loai_san_pham();
+
+
             $this->load->view('admin/layout',$this->data);
         }catch(Exception $e){
             echo $e->getMessage();
