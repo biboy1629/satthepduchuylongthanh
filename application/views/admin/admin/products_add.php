@@ -4,7 +4,13 @@
 <div class="container-fluid">
 
     <?php echo "<p style='color: #aa1111'>".validation_errors()."</p>"; ?>
-    <?php echo "<p style='color: #aa1111'>".$_SESSION['message']."</p>"; ?>
+
+    <?php
+        foreach($_SESSION['message'] as $item){
+            echo $item;
+        }
+
+    ?>
 
     <form method="post" enctype="multipart/form-data" action="them-moi-san-pham.html">
         <div class="form-group">

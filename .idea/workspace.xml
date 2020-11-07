@@ -20,17 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1426be2f-e1b7-4b66-a670-eebaf4e87384" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/models/Loaisanpham_model.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/site/catalogue.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/site/detail_catalogue.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/admin/Sanpham.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/Sanpham.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/core/MY_Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/core/MY_Model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/Sanpham_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Sanpham_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/admin/admin/products_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/admin/products_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/ckfinder/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/ckfinder/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/site/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/layout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/ckfinder/core/connector/php/vendor/cksource/ckfinder" beforeDir="false" afterPath="$PROJECT_DIR$/public/ckfinder/core/connector/php/vendor/cksource/ckfinder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/sanpham/120571537_2667316586917164_8591585484340136558_n_LI.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/sanpham/120579637_336066497473034_6238579026151159986_n_LI.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/sanpham/https_in_local_php.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +75,10 @@
       <workItem from="1604249709097" duration="2674000" />
       <workItem from="1604331294261" duration="1189000" />
       <workItem from="1604410934916" duration="10533000" />
-      <workItem from="1604500915414" duration="10266000" />
+      <workItem from="1604500915414" duration="10880000" />
+      <workItem from="1604585023357" duration="9632000" />
+      <workItem from="1604675365040" duration="695000" />
+      <workItem from="1604716553872" duration="19885000" />
     </task>
     <servers />
   </component>
@@ -95,6 +98,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2446" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604740644290">
+      <screen x="1920" y="0" width="1536" height="824" />
+    </state>
+    <state x="2446" y="214" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1536.824/0.0.1536.824@1920.0.1536.824" timestamp="1604740644290" />
     <state x="2460" y="135" key="NewPhpClassDialog" timestamp="1604508637323">
       <screen x="1920" y="0" width="1536" height="824" />
     </state>

@@ -1041,6 +1041,29 @@ ul.tab_nav li a {
     background: url(../images/icons/ct_hover.png) no-repeat;
     color:#FFFFFF;
 }
+/* catalog*/
+.catalog-title{
+    display: block;
+
+}
+.catalog-title a{
+
+    height: 50px;
+    display: block;
+    width: 100%;
+    display: block;
+    font-weight: 600;
+    color: #bd2130 !important;
+    line-height: 3.5;
+    background-color: #f1f1f1;
+}
+.catalog-name{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: RobotoCondensedRegular;
+}
+
+/*end catalog*/
 
 /*end block product*/
 /* ------------------------------------ */

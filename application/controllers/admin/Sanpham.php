@@ -7,7 +7,7 @@ class Sanpham extends MY_Controller
         parent::__construct();
         $this->load->helper('admin');
         $this->load->model('sanpham_model');
-        $_SESSION['message'] = '';
+        $_SESSION['message'] = array();
     }
 
     function index(){
@@ -29,6 +29,14 @@ class Sanpham extends MY_Controller
 
                 if ($this->form_validation->run() == FALSE)
                 {
+
+                    if(!$this->input->post("Name")){
+                        $_SESSION['message'][] = '<div class="panel panel-warning"> Tên sản phẩm không được để trống ! </div>';
+                    }
+
+                    if(!$this->input->post("SKU")){
+                        $_SESSION['message'][] = '<div class="panel panel-warning">Mã sản phẩm không được để trống</div>';
+                    }
                     $config['upload_path'] = FCPATH.'/uploads/sanpham/';
                     $config['allowed_types'] = 'gif|jpg|png';
                     $config['max_size'] = 15024;
@@ -36,8 +44,8 @@ class Sanpham extends MY_Controller
                     $this->load->library('upload',$config);
                     if(!$this->upload->do_upload('Images')){
                         $upload = $this->upload->display_errors();
-                        $_SESSION['message'] = '<p style="color: #aa1111"> Upload hình không thành công </p>';
-//                        throw new Exception("can not upload file");
+                        $_SESSION['message'][] = '<div class="panel panel-warning"> Upload hình không thành công </div>';
+
                     }else{
                         $upload = $this->upload->data();
 
@@ -49,11 +57,16 @@ class Sanpham extends MY_Controller
                             'Loai_san_pham' => $this->input->post("Loai_san_pham"),
                             'Images' => $upload["file_name"],
                         );
-                        $result = $this->sanpham_model->create($sanpham);
-                        if($result){
-                            $_SESSION['message'] = '<p style="color: #1e7e34"> Upload thành công </p>';
+                        $check = $this->sanpham_model->checkSanphamExist($this->input->post("SKU"));
+                        if(empty($checks)){
+                            $result = $this->sanpham_model->create($sanpham);
                         }else{
-                            $_SESSION['message'] = '<p style="color: #aa1111"> Upload không thành công </p>';
+                            $_SESSION['message'][] = '<div style="background-color: #a94442; color:#aa1111"> Sản phẩm đã tồn tại </div>';
+                        }
+                        if($result){
+                            $_SESSION['message'][] = '<div class="panel panel-success"> Upload thành công </div>';
+                        }else{
+                            $_SESSION['message'][] = '<div class="panel panel-warning"> Upload không thành công </div>';
                         }
                     }
 

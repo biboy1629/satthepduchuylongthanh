@@ -78,6 +78,8 @@
 								</li>
 
 								<li>
+									<a href="catalogue/">CATALOGUE</a>
+								</li><li>
 									<a href="tin_tuc.html">Tin Tức</a>
 								</li>
                                                                
@@ -134,6 +136,8 @@
                                 </ul>-->
 			</li>
 			<li class="t-center m-b-13">
+				<a href="catalogue/" class="txt19">CATALOGUE</a>
+			</li><li class="t-center m-b-13">
 				<a href="sua-chua.html" class="txt19">Tin Tức</a>
 			</li>
 
@@ -534,7 +538,13 @@
 	<script type="text/javascript" src="<?php echo base_url();?>public/js/lightbox.min.js"></script>
 <!--===============================================================================================-->
 	<script src="<?php echo base_url();?>public/js/main.js"></script>
-        <script type="text/javascript" src="<?php echo base_url()?>public/js/jquery.picZoomer.js"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>public/js/jquery.picZoomer.js"></script>
+<!-- ==============================================================================================-->
+    <script src="<?php echo base_url();?>public/js/zoom.js"></script>
+
+
+
+
     <script type="text/javascript">
         $(function() {
             $('.picZoomer').picZoomer();
@@ -591,6 +601,29 @@
 
               });
         </script>
+    <script>
+        $(function(){
+            $('.my-gallery').imageZoom({
+                $(this).imageZoom();
+            });
+
+        });
+        $(function(){
+            $('.my-gallery').imageZoom({
+                $(this).imageZoom({
+                    zoom: 200
+                });
+            });
+        });
+
+        $(function(){
+            $('#imageZoom').imageZoom();
+        });
+
+
+
+    </script>
+
 
 </body>
 </html>

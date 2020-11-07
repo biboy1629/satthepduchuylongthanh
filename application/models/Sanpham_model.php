@@ -11,5 +11,11 @@ class Sanpham_model extends MY_Model {
     function get_all_product(){
         return $this->get_list();
     }
+    function checkSanphamExist($sku){
+        if(!empty($sku)){
+             return $this->get_list(array("where"=>array('SKU'=> $sku)));
+        }
+        return false;
+    }
 
 }

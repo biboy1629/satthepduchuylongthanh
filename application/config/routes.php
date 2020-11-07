@@ -60,6 +60,9 @@ $route['lien-he.html'] = 'home/lien_he';
 $route['san-pham'] = 'home/san_pham';
 $route['hinh-anh'] = 'home/hinh_anh';
 $route['gioi-thieu.html'] = 'home/gioi_thieu';
+$route['catalogue/(:num)/(:any).html'] = 'home/catalogue_detail';
+$route['catalogue'] = 'home/catalogue';
+$route['catalogue/(:num)'] = 'home/catalogue_list';
 
 $route['san-pham/(:any).html'] = 'home/sanpham_details/$1';
 

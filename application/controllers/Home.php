@@ -41,6 +41,26 @@ class Home extends MY_Controller{
         $this->data['temp'] = 'site/search';
         $this->load->view('site/layout',$this->data);
     }
+    function catalogue_list(){
+    die('ok');
+    $id_catalog = $this->uri->segment(1);
+    var_dump($id_catalog);die;
+    $this->data  = array();
+    $this->data['temp'] = 'site/catalogue';
+    $this->load->view('site/layout',$this->data);
+}
+    function catalogue(){
+        $this->data  = array();
+        $this->data['temp'] = 'site/catalogue';
+        $this->load->view('site/layout',$this->data);
+    }
+
+    function catalogue_details(){
+
+        $this->data  = array();
+        $this->data['temp'] = 'site/catalogue';
+        $this->load->view('site/layout',$this->data);
+    }
     function gioi_thieu(){
         $this->data  = array();
         $this->data['temp'] = 'site/intro';
