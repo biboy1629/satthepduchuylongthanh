@@ -99,6 +99,13 @@ class Sanpham extends MY_Controller
     function xoa_san_pham(){
 
     }
+    function get_catalog_con(){
+        $this->load->model("loaisanpham_model");
+        $data = $this->loaisanpham_model->get_lists_catelog_con();
+
+        echo json_encode($data);
+
+    }
 
 
 }

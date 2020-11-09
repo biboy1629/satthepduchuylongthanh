@@ -20,17 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1426be2f-e1b7-4b66-a670-eebaf4e87384" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/views/site/catalogue.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/site/detail_catalogue.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/admin/Sanpham.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/Sanpham.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Loaisanpham_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Loaisanpham_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/Sanpham_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Sanpham_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/admin/admin/products_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/admin/products_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/site/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/layout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/ckfinder/core/connector/php/vendor/cksource/ckfinder" beforeDir="false" afterPath="$PROJECT_DIR$/public/ckfinder/core/connector/php/vendor/cksource/ckfinder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +75,9 @@
       <workItem from="1604500915414" duration="10880000" />
       <workItem from="1604585023357" duration="9632000" />
       <workItem from="1604675365040" duration="695000" />
-      <workItem from="1604716553872" duration="19885000" />
+      <workItem from="1604716553872" duration="20060000" />
+      <workItem from="1604934366246" duration="8000" />
+      <workItem from="1604934793263" duration="10182000" />
     </task>
     <servers />
   </component>

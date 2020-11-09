@@ -399,16 +399,42 @@
 
 </html>
 <script>
-    // $("#gia_cu_the").show();
-    // $("#gia_lien_he").hide();
-    // $("#selec_gia").change(function(){
-    //     var a = $(this).val();
-    //     if(a==1){
-    //         $("#gia_cu_the").show();
-    //         $("#gia_lien_he").hide();
-    //     }else{
-    //         $("#gia_cu_the").hide();
-    //         $("#gia_lien_he").show();
-    //     }
-    // });
+    $("#gia_cu_the").show();
+    $("#gia_lien_he").hide();
+    $("#selec_gia").change(function(){
+        var a = $(this).val();
+        if(a==1){
+            $("#gia_cu_the").show();
+            $("#gia_lien_he").hide();
+        }else{
+            $("#gia_cu_the").hide();
+            $("#gia_lien_he").show();
+        }
+    });
+</script>
+<script>
+    $("#danh_muc").change(function(){
+
+        var a = $(this).val();
+        if(a==6){
+            $.ajax({
+                type: 'GET',
+                url: 'sanpham/get_catalog_con',
+                data: {"id": a },
+                dataType: 'json',
+                success: function (data) {
+
+                    $.each(data, function(index, element) {
+                        $(".sle_con").show();
+                        $("#danh_muc_con").append(new Option(element.Name, element.ID));
+
+                        // var id = element.ID;
+                        // var name = element.Name;
+                    });
+                }
+            });
+        }else{
+            $(".sle_con").hide();
+        }
+    })
 </script>

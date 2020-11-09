@@ -22,7 +22,7 @@
             <input type="text" class="form-control" name="SKU" id="usr" >
         </div>
         <div class="form-group">
-            <label for="pwd">Loại Sản Phẩm(*):</label>
+            <label for="pwd">Category(*):</label>
             <select name="Loai_san_pham"  class="form-control col-md-3" id="danh_muc">
                 <?php
                 foreach ($loai_san_pham as $item){
@@ -31,6 +31,13 @@
                };?>
             </select>
 
+
+        </div>
+        <div class="form-group sle_con" style="display: none;">
+            <label style="color: #aa1111" for="pwd">Category con(*):</label>
+            <select name="Loai_san_pham_con"  class="form-control col-md-3" id="danh_muc_con" >
+
+            </select>
         </div>
 
         <div class="form-group">
@@ -71,6 +78,8 @@
 
 
 </script>
+
+
 
 
 

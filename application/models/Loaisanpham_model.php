@@ -9,4 +9,7 @@ class Loaisanpham_model extends MY_Model {
 
         return $this->get_list(array("order"=>array("ID","ASC")));
     }
+    function get_lists_catelog_con(){
+        return $this->get_list(array("where"=> array('Parent' => 6)));
+    }
 }
