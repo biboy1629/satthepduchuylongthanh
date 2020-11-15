@@ -31,75 +31,23 @@
                 <a class="right" href="">Xem Thêm</a>
                 <div class="clear"></div>
             </div>
-            
+          </div>
+          <?php
+          foreach ($san_pham as $item):?>
             <div class="col-sm-3 product_item">
                 <div class="pro_item_content">
-                    <a class="img_pro" title=""><img class="transition" src="<?php echo base_url()?>public/images/products/lkbc04-1142.jpg" width="100%" /></a>
-                
-                    <a href="" title="">ABCE</a>
+                    <a href="<?php echo base_url()?>san-pham/<?php echo $item->SKU;?>.html" class="img_pro" title=""><img src="<?php echo base_url()?>uploads/sanpham/<?php echo $item->Images;?>"></a>
+
+                    <a href="<?php echo base_url()?>san-pham/<?php echo $item->SKU;?>.html" title=""><?php echo $item->SKU;?></a>
                     <div class="detail_price">
-                        <p>Gia: <span>5.300.350</span></p>
-                        <a href="">
+                        <p>Gia: <span><?php echo $item->Price;?></span></p>
+                        <a href="<?php echo base_url()?>san-pham/<?php echo $item->SKU;?>.html">
                             <div class="detai_click">Chi Tiet</div>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3 product_item">
-                <div class="pro_item_content">
-                    <a class="img_" title=""><img class="transition" src="<?php echo base_url()?>public/images/products/lkbc04-1142.jpg" width="100%" /></a>
-                
-                    <a href="" title="">ABCE</a>
-                    <div class="detail_price">
-                        <p>Gia: <span>5.300.350</span></p>
-                        <a href="">
-                            <div class="detai_click">Chi Tiet</div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 product_item">
-                <div class="pro_item_content">
-                    <a class="img_" title=""><img class="transition" src="<?php echo base_url()?>public/images/products/lkbc04-1142.jpg" width="100%" /></a>
-                
-                    <a href="" title="">ABCE</a>
-                    <div class="detail_price">
-                        <p>Gia: <span>5.300.350</span></p>
-                        <a href="">
-                            <div class="detai_click">Chi Tiet</div>
-                        </a>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="col-sm-3 product_item">
-                <div class="pro_item_content">
-                    <a class="img_" title=""><img class="transition" src="<?php echo base_url()?>public/images/products/lkbc04-1142.jpg" width="100%" /></a>
-                
-                    <a href="" title="">ABCE</a>
-                    <div class="detail_price">
-                        <p>Gia: <span>5.300.350</span></p>
-                        <a href="">
-                            <div class="detai_click">Chi Tiet</div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-              <div class="col-sm-3 product_item">
-                <div class="pro_item_content">
-                    <a class="transition" title="lkbc04-1142"><img class="transition" src="<?php echo base_url()?>public/images/products/lkbc04-1142.jpg" width="100%" /></a>
-                
-                    <a href="" title="ABCE">ABCE</a>
-                    <div class="detail_price">
-                        <p>Gia: <span>5.300.350</span></p>
-                        <a href="">
-                            <div class="detai_click">Chi Tiet</div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            
+          <?php endforeach;?>
              
           </div>
       </div>

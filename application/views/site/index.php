@@ -141,11 +141,11 @@
             foreach ($san_pham as $item):?>
             <div class="col-md-6 col-lg-4 col-xl-3 product_item">
                 <div class="pro_item_content">
-                    <a href="<?php echo base_url()?>san-pham/<?php echo $item->SKU;?>.html" class="img_pro" title=""><img class="transition" src="<?php echo base_url()?>public/images/products/<?php echo $item->Images;?>" width="100%" /></a>
+                    <a href="<?php echo base_url()?>san-pham/<?php echo $item->SKU;?>.html" class="img_pro" title=""><img class="transition" src="<?php echo base_url()?>uploads/sanpham/<?php echo $item->Images;?>" width="100%" /></a>
                 
                     <a href="<?php echo base_url()?>san-pham/<?php echo $item->SKU;?>.html" title=""><?php echo $item->SKU;?></a>
                     <div class="detail_price">
-                        <p>Gia: <span>5.300.350</span></p>
+                        <p>Gia: <span><?php echo $item->Price;?></span></p>
                         <a href="<?php echo base_url()?>san-pham/<?php echo $item->SKU;?>.html">
                             <div class="detai_click">Chi Tiet</div>
                         </a>

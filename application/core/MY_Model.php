@@ -105,12 +105,12 @@ class MY_Model extends CI_Model{
         // them dieu kien cho cau truy van truyen qua bien $input['where']
         // example $input['where'] = array('email'=>'abc@gmail.com')
         if((isset($input['where'])) && $input['where']){
-            $this->db->where($input['where']);
+            $this->db->where($input['where'][0],$input['where'][1]);
         }
         // tim kiem like
         //$input['like'] = array('name' => 'abc')
         if((isset($input['like'])) && $input['like']){
-            $this->db->like($input['like'][0],$input['like'][1]);
+            $this->db->like($input['like']);
         }
         
         // them sap xep du lieu thong qua bien $input['order']
@@ -135,7 +135,7 @@ class MY_Model extends CI_Model{
         return $query->num_rows();
     }
     function get_row($input = array()){
-        
+//        var_dump($input);die;
         $this->get_list_set_input($input);
         $query = $this->db->get($this->table);
         return $query->row();

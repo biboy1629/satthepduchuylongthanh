@@ -12,4 +12,14 @@ class Loaisanpham_model extends MY_Model {
     function get_lists_catelog_con(){
         return $this->get_list(array("where"=> array('Parent' => 6)));
     }
+    function getParent(){
+        return $this->get_list(['order'=>['ID','ASC']]);
+    }
+    function checkLoaiSanPhamExist($name){
+        $result = $this->db->select(['where'=>['Name'=>$name]]);
+        var_dump($result);die;
+    }
+    function getCatalogueDetail($id){
+        return $this->db->get_row(['where'=>['ID'=>$id]]);
+    }
 }

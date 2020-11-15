@@ -19,6 +19,9 @@
   <!-- Custom styles for this template-->
   <link href="<?php echo base_url()?>public/admin/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="<?php echo base_url()?>public/admin/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <!-- Bootstrap core JavaScript-->
+    <script src="<?php echo base_url()?>public/admin/js/jquery.min.js"></script>
+
 
 
 </head>
@@ -70,6 +73,18 @@
           </div>
         </div>
       </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>CATALOGUE</span>
+            </a>
+            <div id="collapse3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="danh-sach-catalogue.html">Danh Sách</a>
+                    <a class="collapse-item" href="them-moi-catalogue.html">Thêm Mới</a>
+                </div>
+            </div>
+        </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
@@ -377,8 +392,8 @@
     </div>
   </div>
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="<?php echo base_url()?>public/admin/js/jquery.min.js"></script>
+
+
   <script src="<?php echo base_url()?>public/admin/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
@@ -388,8 +403,8 @@
   <script src="<?php echo base_url()?>public/admin/js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
-  <script src="<?php echo base_url()?>public/admin/js/jquery.dataTables.min.js"></script>
-  <script src="<?php echo base_url()?>public/admin/js/dataTables.bootstrap4.min.js"></script>
+  <script src="<?php echo base_url()?>public/admin/js/datatables/jquery.dataTables.min.js"></script>
+  <script src="<?php echo base_url()?>public/admin/js/datatables/dataTables.bootstrap4.min.js"></script>
 
   <!-- Page level custom scripts -->
   <script src="<?php echo base_url()?>public/admin/js/datatables-demo.js"></script>
@@ -399,16 +414,16 @@
 
 </html>
 <script>
+
     $("#gia_cu_the").show();
     $("#gia_lien_he").hide();
     $("#selec_gia").change(function(){
         var a = $(this).val();
         if(a==1){
-            $("#gia_cu_the").show();
-            $("#gia_lien_he").hide();
+            $("#gia_cu_the").val("0.00");
+
         }else{
-            $("#gia_cu_the").hide();
-            $("#gia_lien_he").show();
+            $("#gia_cu_the").val("Liên Hệ");
         }
     });
 </script>

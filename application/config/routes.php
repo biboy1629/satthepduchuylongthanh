@@ -64,7 +64,7 @@ $route['catalogue/(:num)/(:any).html'] = 'home/catalogue_detail';
 $route['catalogue'] = 'home/catalogue';
 $route['catalogue/(:num)'] = 'home/catalogue_list';
 
-$route['san-pham/(:any).html'] = 'home/sanpham_details/$1';
+$route['san-pham/(:any).html'] = 'home/sanpham_details';
 
 $route['san-pham-camera.html'] = 'home/san_pham_camera';
 $route['san-pham-may-tinh.html'] = 'home/san_pham_computer';
@@ -79,14 +79,18 @@ $route['san-pham-may-tinh.html'] = 'home/san_pham_computer';
 
 // admin
 $route['admin'] = 'admin/admin/index';
-$route['admin/danh-sach-san-pham.html'] = 'admin/admin/list_san_pham';
+$route['admin/danh-sach-san-pham.html'] = 'admin/sanpham/list_san_pham';
 $route['admin/danh-sach-user.html'] = 'admin/admin/danh_sach';
 $route['admin/them-moi-user.html'] = 'admin/admin/user_add';
 $route['admin/them-bai-moi.html'] = 'admin/admin/add_new_post';
 
-$route['admin/danh-sach-san-pham.html'] = 'admin/sanpham/index';
+//$route['admin/danh-sach-san-pham.html'] = 'admin/sanpham/index';
 $route['admin/them-moi-san-pham.html'] = 'admin/sanpham/them_moi_san_pham';
-$route['admin/sua-san-pham/(:any)'] = 'admin/sanpham/chinh_sua_san_pham';
+$route['admin/sua-san-pham/(:num)'] = 'admin/sanpham/edit';
+
+$route['admin/danh-sach-catalogue.html'] = 'admin/catalogue/index';
+$route['admin/them-moi-catalogue.html'] = 'admin/catalogue/create';
+$route['admin/chinh-sua-catalogue/(:num)'] = 'admin/catalogue/edit';
 
 $route['admin/logout.html'] = 'admin/admin/logout';
 $route['admin/login.html'] = 'admin/admin/login';

@@ -976,9 +976,12 @@ ul.tab_nav li a {
 }
 /*end carousel multiple item*/
 /*block product*/
+.clear{
+    clear: both;
+}
 .product_item{
     padding:5px 10px;
-    
+    float: left;
     text-align: center;
 }
 .product_item img{

@@ -108,12 +108,12 @@
             <div class="content_product">
                 <div class="des-product col-xs-12 col-sm-6 col-md-6 col-lg-5">
                     <div class="picZoomer">
-                        <img src="<?php echo base_url()?>public/images/products/<?php echo $san_pham->Images;?>" height="320" width="320" alt="">
+                        <img src="<?php echo base_url()?>uploads/sanpham/<?php echo $san_pham->Images;?>" height="320" width="320" alt="">
                     </div>
 
                     <ul class="piclist">
                         <?php foreach($list_thumb as $item):?>
-                            <li><img src="<?php echo base_url()?>public/images/products/thumbnail/<?php echo $item->Name;?>" alt=""></li>
+                            <li><img src="<?php echo base_url()?>uploads/sanpham/thumbnail/<?php echo $item->Name;?>" alt=""></li>
                         <?php endforeach;?>
                         
                     </ul>
@@ -126,10 +126,7 @@
                     </li>
                     <li class="li_pr">
                         Giá: <span class="price">
-                            <?php
-
-                                echo ((int)$san_pham->Type_price == 1)?  $san_pham->Price: "Liên Hệ";
-                            ?>
+                            <?= $san_pham->Price;?>
                         </span>
                     </li> 
                     <li class="li_pr">Hotline: <span class="price">0888.444.239</span></li>

@@ -2,6 +2,8 @@
 
 
 class Home extends MY_Controller{
+
+
     function index(){
         
         $this->data = array();
@@ -17,23 +19,28 @@ class Home extends MY_Controller{
     }
     function san_pham(){
         //get all sanpham
+        $this->data['san_pham'] = $this->getSan_pham();
         $this->data['temp'] = 'site/products';
         $this->load->view('site/layout',$this->data);
     }
-    function sanpham_details($sku = ''){
-        if(!empty($sku) && isset($sku)){
+    function sanpham_details(){
+
+        $sku = $this->uri->segment(2);
+        $sku = explode('.',$sku);
+
+        if(!empty($sku[0]) && isset($sku[0])){
             $this->data = array();
-            $this->data['san_pham'] = $this->getDetails($sku);
-         
+            $this->data['san_pham'] = $this->getDetails($sku[0]);
+
             //get thumbnail
-            $this->data['list_thumb'] = $this->getThumbnail($sku);
+            $this->data['list_thumb'] = $this->getThumbnail($sku[0]);
             $this->data['temp']='site/details';
             $this->load->view('site/layout',$this->data);
         }else{
             $this->index();
         }
-        
-        
+
+
     }
     function search(){
         $this->data  = array();
@@ -46,7 +53,7 @@ class Home extends MY_Controller{
     $id_catalog = $this->uri->segment(2);
 
     $this->data  = array();
-    $this->data['temp'] = 'site/catalogue';
+    $this->data['temp'] = 'site/detail_catalogue';
     $this->load->view('site/layout',$this->data);
 }
     function catalogue(){

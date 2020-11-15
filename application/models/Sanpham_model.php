@@ -17,6 +17,9 @@ class Sanpham_model extends MY_Model {
         }
         return false;
     }
+    public function getSanphamDetail($id){
+        return $this->get_row(['where'=>['ID',$id]]);
+    }
 
 
 }

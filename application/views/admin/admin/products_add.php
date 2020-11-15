@@ -51,7 +51,6 @@
         <div class="form-group">
             <label for="pwd">Price:</label>
             <input type="text" name="Price" class="form-control" id="gia_cu_the" placeholder="0.00">
-            <input type="text" readonly name="Price" class="form-control" id="gia_lien_he" value="Liên Hệ" placeholder="Giá Liên Hệ">
         </div>
         <div class="form-group">
             <label for="comment">Mô Tả:</label>

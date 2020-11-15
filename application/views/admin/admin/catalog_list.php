@@ -1,4 +1,3 @@
-
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -16,44 +15,34 @@
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>SKU</th>
-                        <th>Tên</th>
-                        <th>Hình Ảnh</th>
-                        <th>Giá</th>
-                        <th>Loại Sản Phẩm</th>
-                        <th>Actions</th>
+                        <th>Name</th>
+                        <th>Parent</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
                         <th>ID</th>
-                        <th>SKU</th>
-                        <th>Tên</th>
-                        <th>Hình Ảnh</th>
-                        <th>Giá</th>
-                        <th>Loại Sản Phẩm</th>
-                        <th>Actions</th>
+                        <th>Name</th>
+                        <th>Parent</th>
+                        <th>Action</th>
                     </tr>
                     </tfoot>
                     <tbody>
                     <?php
-                        foreach ($data as $item){
-//                            var_dump($data);die;
+                        foreach($catalogue_list as $item){
                     ?>
                     <tr>
-                        <td><?= $item->ID;?></td>
-                        <td><a class="p-2" href="sua-san-pham/<?= $item->ID;?>"><?= $item->SKU;?></a></td>
-                        <td><?= $item->Name;?></td>
-                        <td><?= $item->Images;?></td>
-                        <td><?= $item->Price;?></td>
-                        <td><?= $item->Loai_san_pham;?></td>
+                        <td><?= $item->ID?></td>
+                        <td><a class="p-2" href="chinh-sua-catalogue/<?= $item->ID?>"><?= $item->Name?></a></td>
+                        <td><?= $item->Parent?></td>
                         <td>
-                            <a class="p-2" href="sua-san-pham/<?= $item->ID;?>"><i class="fas fa-edit"></i></a>
-                            <a class="p-2" href="#" id_sanpham ="<?= $data->ID?>"><i class="fas fa-trash-alt"></i></a>
+                            <a class="p-2" href="chinh-sua-catalogue/<?= $item->ID?>"><i class="fas fa-edit"></i></a>
+                            <a class="p-2" href="#" id_cata="<?= $item->ID?>"><i class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
-                    <?php }?>
 
+                    <?php }?>
                     </tbody>
                 </table>
             </div>

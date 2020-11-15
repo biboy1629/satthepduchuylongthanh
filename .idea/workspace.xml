@@ -20,14 +20,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1426be2f-e1b7-4b66-a670-eebaf4e87384" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/application/controllers/admin/Catalogue.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/admin/admin/catalog_add.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/admin/admin/catalog_edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/admin/admin/catalog_list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/admin/Sanpham.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/Sanpham.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/core/MY_Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/core/MY_Model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/Loaisanpham_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Loaisanpham_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/Sanpham_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Sanpham_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/admin/product_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/admin/product_edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/admin/admin/products_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/admin/products_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/admin/products_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/admin/products_list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/admin/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/site/details.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/details.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/site/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/js/dataTables.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/js/jquery.dataTables.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/js/sb-admin-2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/js/sb-admin-2.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/ckfinder/core/connector/php/vendor/cksource/ckfinder" beforeDir="false" afterPath="$PROJECT_DIR$/public/ckfinder/core/connector/php/vendor/cksource/ckfinder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +94,14 @@
       <workItem from="1604675365040" duration="695000" />
       <workItem from="1604716553872" duration="20060000" />
       <workItem from="1604934366246" duration="8000" />
-      <workItem from="1604934793263" duration="10182000" />
+      <workItem from="1604934793263" duration="10263000" />
+      <workItem from="1604973570475" duration="69000" />
+      <workItem from="1605104864697" duration="12314000" />
+      <workItem from="1605145660252" duration="33000" />
+      <workItem from="1605194616946" duration="12616000" />
+      <workItem from="1605232121142" duration="236000" />
+      <workItem from="1605356465285" duration="7405000" />
+      <workItem from="1605407343446" duration="158000" />
     </task>
     <servers />
   </component>
@@ -101,13 +125,27 @@
       <screen x="1920" y="0" width="1536" height="824" />
     </state>
     <state x="2446" y="214" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1536.824/0.0.1536.824@1920.0.1536.824" timestamp="1604740644290" />
-    <state x="2460" y="135" key="NewPhpClassDialog" timestamp="1604508637323">
-      <screen x="1920" y="0" width="1536" height="824" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1604973638220">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1604973638220" />
+    <state x="540" y="135" key="NewPhpClassDialog" timestamp="1605116431942">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="540" y="135" key="NewPhpClassDialog/0.0.1536.824/-1920.0.1536.824@0.0.1536.824" timestamp="1605116431942" />
     <state x="2460" y="135" key="NewPhpClassDialog/1920.0.1536.824/0.0.1536.824@1920.0.1536.824" timestamp="1604508637323" />
-    <state x="2524" y="336" key="NewPhpFileDialog" timestamp="1603811351964">
-      <screen x="1920" y="0" width="1536" height="824" />
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1605113867475">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824/-1920.0.1536.824@0.0.1536.824" timestamp="1605113867475" />
     <state x="2524" y="336" key="NewPhpFileDialog/1920.0.1536.824/0.0.1536.824@1920.0.1536.824" timestamp="1603811351964" />
+    <state x="478" y="11" width="579" height="801" key="find.popup" timestamp="1605201746737">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="478" y="11" width="579" height="801" key="find.popup/0.0.1536.824/-1920.0.1536.824@0.0.1536.824" timestamp="1605201746737" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605371774854">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1536.824@0.0.1536.824" timestamp="1605371774854" />
   </component>
 </project>

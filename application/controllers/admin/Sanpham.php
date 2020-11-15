@@ -99,6 +99,77 @@ class Sanpham extends MY_Controller
     function xoa_san_pham(){
 
     }
+    function edit(){
+        $this->load->library('form_validation');
+        $id = $this->uri->segment(3);
+
+        if($this->input->post()){
+
+            if ($this->form_validation->run() == FALSE)
+            {
+
+                if(!$this->input->post("Name")){
+                    $_SESSION['message'][] = '<div class="panel panel-warning"> Tên sản phẩm không được để trống ! </div>';
+                }
+
+                if(!$this->input->post("SKU")){
+                    $_SESSION['message'][] = '<div class="panel panel-warning">Mã sản phẩm không được để trống</div>';
+                }
+                var_dump($this->input->post());die;
+
+                $config['upload_path'] = FCPATH.'/uploads/sanpham/';
+                $config['allowed_types'] = 'gif|jpg|png';
+                $config['max_size'] = 15024;
+                $config['encrypt_name'] = false;
+                $this->load->library('upload',$config);
+                if(!$this->upload->do_upload('Images')){
+                    $upload = $this->upload->display_errors();
+                    $_SESSION['message'][] = '<div class="panel panel-warning"> Upload hình không thành công </div>';
+
+                }else{
+                    $upload = $this->upload->data();
+
+                    $sanpham = array(
+                        'Name' => $this->input->post("Name"),
+                        'SKU' => $this->input->post("SKU"),
+                        'Price' => $this->input->post("Price"),
+                        'Description' => $this->input->post("Description"),
+                        'Loai_san_pham' => $this->input->post("Loai_san_pham"),
+                        'Images' => $upload["file_name"],
+                    );
+                    $check = $this->sanpham_model->checkSanphamExist($this->input->post("SKU"));
+                    if(empty($checks)){
+                        $result = $this->sanpham_model->create($sanpham);
+                    }else{
+                        $_SESSION['message'][] = '<div style="background-color: #a94442; color:#aa1111"> Sản phẩm đã tồn tại </div>';
+                    }
+                    if($result){
+                        $_SESSION['message'][] = '<div class="panel panel-success"> Upload thành công </div>';
+                    }else{
+                        $_SESSION['message'][] = '<div class="panel panel-warning"> Upload không thành công </div>';
+                    }
+                }
+
+            }
+        }
+
+        $this->load->model("loaisanpham_model");
+        $this->data  = array();
+        $this->data['temp'] = 'admin/admin/product_edit';
+
+        $this->data['loai_san_pham'] = $this->loaisanpham_model->get_loai_san_pham();
+        $this->data['data'] = $this->sanpham_model->getSanphamDetail($id);
+
+
+        $this->load->view('admin/layout',$this->data);
+    }
+    function list_san_pham(){
+
+        $this->data  = array();
+        $this->data['temp'] = 'admin/admin/products_list';
+        $this->data['data'] = $this->sanpham_model->get_list();
+        $this->load->view('admin/layout',$this->data);
+    }
     function get_catalog_con(){
         $this->load->model("loaisanpham_model");
         $data = $this->loaisanpham_model->get_lists_catelog_con();
@@ -106,6 +177,7 @@ class Sanpham extends MY_Controller
         echo json_encode($data);
 
     }
+
 
 
 }
