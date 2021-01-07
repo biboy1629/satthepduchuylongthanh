@@ -6,6 +6,7 @@ class Sanpham_model extends MY_Model {
     function get_details($SKU){
         $this->get_list_set_input(array('where'=>array('SKU'=>$SKU)));
         $query = $this->db->get($this->table);
+
         return $query->row();
     }
     function get_all_product(){
@@ -18,7 +19,14 @@ class Sanpham_model extends MY_Model {
         return false;
     }
     public function getSanphamDetail($id){
-        return $this->get_row(['where'=>['ID',$id]]);
+        $this->db->where('ID',$id);
+        $query = $this->db->get($this->table);
+        return $query->row();
+    }
+    public function xoaSanpham($id){
+        $query = 'DELETE FROM tbl_'.$this->table.' WHERE ID = '.$id;
+
+        return $this->db-$this->query($query);
     }
 
 

@@ -81,27 +81,18 @@
             <div id="collapse3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <a class="collapse-item" href="danh-sach-catalogue.html">Danh Sách</a>
-                    <a class="collapse-item" href="them-moi-catalogue.html">Thêm Mới</a>
+                    <a class="collapse-item" href="them-moi-catalogue.html">Thêm Mới CATALOGUE</a>
+                </div>
+            </div>
+            <div id="collapse3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="danh-sach-san-pham_catalogue.html">Danh Sách Bài Viết</a>
+                    <a class="collapse-item" href="them-moi-san-pham_catalogue.html">Thêm Mới Bài Viết</a>
                 </div>
             </div>
         </li>
 
-      <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-fw fa-wrench"></i>
-          <span>Utilities</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="utilities-color.html">Colors</a>
-            <a class="collapse-item" href="utilities-border.html">Borders</a>
-            <a class="collapse-item" href="utilities-animation.html">Animations</a>
-            <a class="collapse-item" href="utilities-other.html">Other</a>
-          </div>
-        </div>
-      </li>
+
 
       <!-- Divider -->
       <hr class="sidebar-divider">
@@ -111,39 +102,6 @@
         Addons
       </div>
 
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Pages</span>
-        </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="login.html">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
-            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-            <div class="collapse-divider"></div>
-            <h6 class="collapse-header">Other Pages:</h6>
-            <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span></a>
-      </li>
-
-      <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Tables</span></a>
-      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -408,7 +366,7 @@
 
   <!-- Page level custom scripts -->
   <script src="<?php echo base_url()?>public/admin/js/datatables-demo.js"></script>
-  
+
 
 </body>
 
@@ -420,18 +378,24 @@
     $("#selec_gia").change(function(){
         var a = $(this).val();
         if(a==1){
+            $("#gia_cu_the").attr('readonly', false);
             $("#gia_cu_the").val("0.00");
 
         }else{
+            $("#gia_cu_the").attr('readonly', true);
             $("#gia_cu_the").val("Liên Hệ");
         }
     });
 </script>
 <script>
+
+
     $("#danh_muc").change(function(){
 
+        $("#danh_muc_con").html('<option value="1">None</option>');
         var a = $(this).val();
-        if(a==6){
+
+        // if(a==6){
             $.ajax({
                 type: 'GET',
                 url: 'sanpham/get_catalog_con',
@@ -440,7 +404,7 @@
                 success: function (data) {
 
                     $.each(data, function(index, element) {
-                        $(".sle_con").show();
+                        // console.log(element);
                         $("#danh_muc_con").append(new Option(element.Name, element.ID));
 
                         // var id = element.ID;
@@ -448,8 +412,150 @@
                     });
                 }
             });
+        // }else{
+            // $(".sle_con").hide();
+        // }
+    });
+    // $(".catalog_childs").html('<option value="1">None</option>');
+    $(".catalog_parent").change(function(){
+        $(".catalog_childs").html('<option value="1">None</option>');
+        var a = $(this).val();
+
+        // if(a==6){
+        $.ajax({
+            type: 'GET',
+            url: 'sanpham/get_catalog_con',
+            data: {"id": a },
+            dataType: 'json',
+            success: function (data) {
+
+                $.each(data, function(index, element) {
+                    $(".form-catalog-childs").show();
+                    $(".catalog_childs").append(new Option(element.Name, element.ID));
+
+                    // var id = element.ID;
+                    // var name = element.Name;
+                });
+            }
+        });
+    });
+    $(".btn-xoa").click(function(){
+        if(confirm("Are you sure you want to delete this?")){
+            var url = $(this).attr('link');
+            var url_base = $(this).attr('base_url');
+            var id = $(this).attr('maso');
+
+            $.ajax({
+                type: 'GET',
+                url: url,
+                data: {"id": id },
+                dataType: 'text',
+                success: function (data) {
+                    location.reload();
+                }
+            });
         }else{
-            $(".sle_con").hide();
+            return false;
         }
+
+    });
+    $(document).on('change','#danh_muc_con',function (){
+
+
+        $("#danh_muc_con_con").html('<option value="1">None</option>');
+        var a = $(this).val();
+
+        $.ajax({
+            type: 'GET',
+            url: 'sanpham/get_catalog_con',
+            data: {"id": a },
+            dataType: 'json',
+            success: function (data) {
+
+                $.each(data, function(index, element) {
+                    $("#danh_muc_con_con").append(new Option(element.Name, element.ID));
+
+                    // var id = element.ID;
+                    // var name = element.Name;
+                });
+            }
+        });
+
+    });
+
+    var option = $('#loai_cat').val();
+    $.ajax({
+        type: 'GET',
+        url: 'sanpham/get_catalog_con',
+        data: {"id": option },
+        dataType: 'json',
+        success: function (data) {
+
+            $.each(data, function(index, element) {
+                $("#nhan_hieu").append(new Option(element.Name, element.ID));
+
+                // var id = element.ID;
+                // var name = element.Name;
+            });
+        }
+    });
+    $(document).on('change','#loai_cat',function(){
+
+        $("#nhan_hieu").html('<option value="1">None</option>');
+        var option = $(this).val();
+        $.ajax({
+            type: 'GET',
+            url: 'sanpham/get_catalog_con',
+            data: {"id": option },
+            dataType: 'json',
+            success: function (data) {
+
+                $.each(data, function(index, element) {
+                    $("#nhan_hieu").append(new Option(element.Name, element.ID));
+
+                    // var id = element.ID;
+                    // var name = element.Name;
+                });
+            }
+        });
+        // $("#nhan_hieu")
     })
+
+    // $(document).ready(function() {
+    //     $("#txt-danh-muc-moi").keyup(function() {
+    //         var name = $(this).val();
+    //         $.ajax({
+    //             type: 'GET',
+    //             url: 'admin/catalogue/get_name_category',
+    //             data: {"name": name },
+    //             dataType: 'text',
+    //             success: function (data) {
+    //
+    //                 $.each(data, function(index, element) {
+    //                     console.log(element);
+    //                     if(element.result){
+    //                         $("#show_err_danhmucmoi").html("Category đã tồn tại ");
+    //                     }else{
+    //                         $("#show_err_danhmucmoi").html("");
+    //                     }
+    //
+    //
+    //                     var id = element.ID;
+    //                     var name = element.Name;
+    //                 });
+    //             }
+    //         });
+    //     });
+    // });
+
+
+
+    var table = $('#dataTable').DataTable();
+    table
+        .column( '0:visible' )
+        .order('DESC')
+        .draw();
+
+    alert
 </script>
+

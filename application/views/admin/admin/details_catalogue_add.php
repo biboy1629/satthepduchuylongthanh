@@ -5,28 +5,29 @@
     <?php echo "<p style='color: #aa1111'>".validation_errors()."</p>"; ?>
 
     <?php
-        foreach($_SESSION['message'] as $item){
-            echo $item;
-        }
+    foreach($_SESSION['message'] as $item){
+        echo $item;
+    }
 
     ?>
 
     <form method="post" enctype="multipart/form-data" action="them-moi-catalogue.html">
         <div class="form-group">
-            <label for="pwd">Loại Cha:</label>
-            <select name="Parent" class="form-control catalog_parent">
+            <label for="pwd">Loại CATALOGUE:</label>
+            <select name="loai_cat" class="form-control" id="loai_cat">
                 <?php
-                foreach ($loai_cha as $item){
+                foreach ($loai_cat as $item){
                     echo '<option value="'.$item->ID.'">'.$item->Name.'</option>';
                 }
                 ?>
 
             </select>
         </div>
-        <div class="form-group form-catalog-childs">
-            <label for="pwd">List Danh Mục Con</label>
-            <select name="parent_childs" class="form-control catalog_childs">
+        <div class="form-group">
+            <label for="pwd">Thương Hiệu:</label>
+            <select name="nhan_hieu" class="form-control" id="nhan_hieu">
                 <option value="1">None</option>
+
             </select>
         </div>
         <div class="form-group">

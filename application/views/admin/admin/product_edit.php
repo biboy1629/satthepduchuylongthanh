@@ -24,8 +24,10 @@
         <div class="form-group">
             <label for="pwd">Category(*):</label>
             <select name="Loai_san_pham"  class="form-control col-md-3" id="danh_muc">
+                <option value="0">NONE</option>
                 <?php
                 foreach ($loai_san_pham as $item){
+
                     if($data->Loai_san_pham == $item->ID){
                         echo "<option selected value=".$item->ID.">".$item->Name."</option>";
                     }else{
@@ -36,10 +38,21 @@
 
 
         </div>
-        <div class="form-group sle_con" style="display: none;">
+        <div class="form-group sle_con" >
             <label style="color: #aa1111" for="pwd">Category con(*):</label>
             <select name="Loai_san_pham_con"  class="form-control col-md-3" id="danh_muc_con" >
+                <option value="1">None</option>
+                <?php
+                    foreach ($loai_san_pham_con as $item){
 
+                        if($data->Loai_san_pham_con == $item->ID){
+                            echo "<option selected value=".$item->ID.">".$item->Name."</option>";
+                        }else{
+
+                            echo "<option  value=".$item->ID.">".$item->Name."</option>";
+                        }
+                    }
+                ?>
             </select>
         </div>
 
@@ -47,11 +60,15 @@
             <label for="pwd">Loại Giá(*):</label>
             <select name="selec_gia"  class="form-control col-md-3" id="selec_gia">
                 <?php
+                $a = '';
+                $b = '';
                 if(strcmp($data->Price, "Liên Hệ")==0){
-                    echo '<option value="2">Giá Liên Hệ</option>';
+                    $a = 'selected';
                 }else{
-                   echo '<option value="1">Giá Cụ Thể</option>' ;
+                    $b = 'selected';
                 }
+                echo '<option  '.$a.' value="2">Giá Liên Hệ</option>';
+                echo '<option '.$b.' value="1">Giá Cụ Thể</option>' ;
                 ?>
 
 
@@ -68,9 +85,11 @@
         </div>
         <div class="form-group">
             <label for="exampleFormControlFile1">Chọn Hình Ảnh(*):</label>
-            <input type="file" name="Images" value="<?= $data->Images; ?>" class="form-control-file" id="exampleFormControlFile1">
+            <input type="file" name="Images" value="<?= $data->Images; ?>"  class="form-control-file" id="exampleFormControlFile1">
+            <input type="text" hidden name="hinh" value="<?= $data->Images; ?>"   />
+            <img src="<?= base_url('/uploads/sanpham/'.$data->Images);?>">
         </div>
-        <button type="submit" name="add_product" class="btn btn-success">Thêm Mới</button>
+        <button type="submit" name="edit_product" class="btn btn-success">Cập Nhật</button>
     </form>
 
 </div>

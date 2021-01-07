@@ -22,8 +22,8 @@
             <input type="text" class="form-control" name="SKU" id="usr" >
         </div>
         <div class="form-group">
-            <label for="pwd">Category(*):</label>
-            <select name="Loai_san_pham"  class="form-control col-md-3" id="danh_muc">
+            <label for="pwd">Danh mục(*):</label>
+            <select name="Loai_danh_muc"  class="form-control col-md-3" id="danh_muc">
                 <?php
                 foreach ($loai_san_pham as $item){
 
@@ -33,10 +33,16 @@
 
 
         </div>
-        <div class="form-group sle_con" style="display: none;">
-            <label style="color: #aa1111" for="pwd">Category con(*):</label>
-            <select name="Loai_san_pham_con"  class="form-control col-md-3" id="danh_muc_con" >
-
+        <div class="form-group sle_con" style="">
+            <label style="color: #aa1111" for="pwd">Loại Sản phẩm(*):</label>
+            <select name="Loai_san_pham"  class="form-control col-md-3" id="danh_muc_con" >
+                <option value="1">None</option>
+            </select>
+        </div>
+        <div class="form-group sle_con_con" style="">
+            <label style="color: #aa1111" for="pwd">Thương Hiệu(*):</label>
+            <select name="Loai_san_pham_con"  class="form-control col-md-3" id="danh_muc_con_con" >
+                <option value="1">None</option>
             </select>
         </div>
 

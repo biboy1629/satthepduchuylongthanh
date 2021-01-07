@@ -95,17 +95,19 @@ class MY_Model extends CI_Model{
         return FALSE;
     }
     function get_list($input = array()){
-//        pre($input);
+
         $this->get_list_set_input($input);
         $query = $this->db->get($this->table);
         return $query->result();
     }
     protected function get_list_set_input($input = array()){
+
         
         // them dieu kien cho cau truy van truyen qua bien $input['where']
         // example $input['where'] = array('email'=>'abc@gmail.com')
         if((isset($input['where'])) && $input['where']){
-            $this->db->where($input['where'][0],$input['where'][1]);
+
+            $this->db->where($input['where']);
         }
         // tim kiem like
         //$input['like'] = array('name' => 'abc')
@@ -127,6 +129,7 @@ class MY_Model extends CI_Model{
         if(isset($input['limit'][0]) && isset($input['limit'][1])){
             $this->db->limit($input['limit'][0], $input['limit'][1]);
         }
+
         
     }
     function get_total($input = array()){

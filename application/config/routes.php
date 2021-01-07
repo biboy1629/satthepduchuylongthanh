@@ -60,9 +60,11 @@ $route['lien-he.html'] = 'home/lien_he';
 $route['san-pham'] = 'home/san_pham';
 $route['hinh-anh'] = 'home/hinh_anh';
 $route['gioi-thieu.html'] = 'home/gioi_thieu';
-$route['catalogue/(:num)/(:any).html'] = 'home/catalogue_detail';
 $route['catalogue'] = 'home/catalogue';
-$route['catalogue/(:num)'] = 'home/catalogue_list';
+$route['catalogue/(:any)'] = 'home/catalogue_list';
+$route['catalogue/(:any)/(:any).html'] = 'home/catalogue_detail';
+
+
 
 $route['san-pham/(:any).html'] = 'home/sanpham_details';
 
@@ -91,6 +93,9 @@ $route['admin/sua-san-pham/(:num)'] = 'admin/sanpham/edit';
 $route['admin/danh-sach-catalogue.html'] = 'admin/catalogue/index';
 $route['admin/them-moi-catalogue.html'] = 'admin/catalogue/create';
 $route['admin/chinh-sua-catalogue/(:num)'] = 'admin/catalogue/edit';
+$route['admin/danh-sach-san-pham_catalogue.html'] = 'admin/catalogue/details_category_list';
+$route['admin/them-moi-san-pham_catalogue.html'] = 'admin/catalogue/details_category_manager';
+$route['admin/chinh-sua-san-pham_catalogue/(:num)'] = 'admin/catalogue/details_category_manager';
 
 $route['admin/logout.html'] = 'admin/admin/logout';
 $route['admin/login.html'] = 'admin/admin/login';

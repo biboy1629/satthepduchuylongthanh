@@ -102,32 +102,32 @@
             </div>
             
           </div>
-          <div class="col-sm-12 margin_bottom ttnb_box">
-            <h4 class="header-title">Tin Tức Nổi Bật</h4>
-            <div class="border-square">
-                <ul>
-                    <li>
-                        <a href="" >
-                            <img src="<?php echo base_url()?>public/images/tintuc/mini/1111e-7315.jpg" alt="Thiết kế showroom trưng bày cho khách hàng mới." />
-                            <p>Thiết kế showroom trưng bày cho khách hàng mới.</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" >
-                            <img src="<?php echo base_url()?>public/images/tintuc/mini/1111e-7315.jpg" alt="Thiết kế showroom trưng bày cho khách hàng mới." />
-                            <p>Thiết kế showroom trưng bày cho khách hàng mới.</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" >
-                            <img src="<?php echo base_url()?>public/images/tintuc/mini/1111e-7315.jpg" alt="Thiết kế showroom trưng bày cho khách hàng mới." />
-                            <p>Thiết kế showroom trưng bày cho khách hàng mới.</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-          </div>
+<!--          <div class="col-sm-12 margin_bottom ttnb_box">-->
+<!--            <h4 class="header-title">Tin Tức Nổi Bật</h4>-->
+<!--            <div class="border-square">-->
+<!--                <ul>-->
+<!--                    <li>-->
+<!--                        <a href="" >-->
+<!--                            <img src="--><?php //echo base_url()?><!--public/images/tintuc/mini/1111e-7315.jpg" alt="Thiết kế showroom trưng bày cho khách hàng mới." />-->
+<!--                            <p>Thiết kế showroom trưng bày cho khách hàng mới.</p>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="" >-->
+<!--                            <img src="--><?php //echo base_url()?><!--public/images/tintuc/mini/1111e-7315.jpg" alt="Thiết kế showroom trưng bày cho khách hàng mới." />-->
+<!--                            <p>Thiết kế showroom trưng bày cho khách hàng mới.</p>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="" >-->
+<!--                            <img src="--><?php //echo base_url()?><!--public/images/tintuc/mini/1111e-7315.jpg" alt="Thiết kế showroom trưng bày cho khách hàng mới." />-->
+<!--                            <p>Thiết kế showroom trưng bày cho khách hàng mới.</p>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--            -->
+<!--          </div>-->
         </div>
       </div>
       <div class="col-sm-7 col-lg-9">

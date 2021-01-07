@@ -79,6 +79,27 @@
 
 								<li>
 									<a href="catalogue/">CATALOGUE</a>
+                                    <ul class="sub_menu">
+                                        <?php
+                                        $CI =& get_instance();
+                                        $CI->load->model('loaisanpham_model');
+
+                                        foreach ($menu_catalog as $item){
+                                            echo '<li><a class="" href="'.base_url("catalogue/").$item->Slug.'">'.$item->Name.'</a>';
+                                                $result = $CI->loaisanpham_model->get_loai_san_pham($item->ID);
+                                                if(!empty($result)){
+                                                    echo '<ul class="sub_menu_child">';
+                                                    foreach ($result as $childs){
+                                                        echo '<li><a class="" href="catalogue/'.$item->Slug.'/'.$childs->Slug.'.html">'.$childs->Name.'</a></li>';
+                                                    }
+                                                    echo '</ul>';
+                                                }
+
+                                            echo '</li>';
+                                        }
+                                        ?>
+                                    </ul>
+
 								</li><li>
 									<a href="tin_tuc.html">Tin Tức</a>
 								</li>
@@ -130,14 +151,29 @@
 
 			<li class="t-center m-b-13">
 				<a href="san-pham/" class="txt19">Sản Phẩm</a>
-<!--                                <ul class="sub_menusidebar">
+                                <ul class="sub_menusidebar">
                                     <li><a class="txt19" href="">Camera</a></li>
                                     <li><a class="txt19" href="">Máy Tính</a></li>
-                                </ul>-->
+                                </ul>
 			</li>
 			<li class="t-center m-b-13">
 				<a href="catalogue/" class="txt19">CATALOGUE</a>
-			</li><li class="t-center m-b-13">
+                <ul class="sub_menusidebar">
+                    <?php
+                    $CI =& get_instance();
+                    $CI->load->model('loaisanpham_model');
+
+                    foreach ($menu_catalog as $item){
+                        echo '<li><a class="txt19" href="'.base_url("catalogue/").$item->ID.'">'.$item->Name.'</a>';
+                        $result = $CI->loaisanpham_model->get_loai_san_pham($item->ID);
+
+
+                        echo '</li>';
+                    }
+                    ?>
+                </ul>
+			</li>
+            <li class="t-center m-b-13">
 				<a href="sua-chua.html" class="txt19">Tin Tức</a>
 			</li>
 
@@ -619,7 +655,6 @@
         $(function(){
             $('#imageZoom').imageZoom();
         });
-
 
 
     </script>

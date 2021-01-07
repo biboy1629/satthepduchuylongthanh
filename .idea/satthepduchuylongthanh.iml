@@ -7,5 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="warehouse_brand_version" />
+    <orderEntry type="module" module-name="solvang-design" />
   </component>
 </module>

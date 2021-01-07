@@ -7,7 +7,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">CATALOG</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Bài Viết CATALOGUE</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -30,18 +30,18 @@
                     </tfoot>
                     <tbody>
                     <?php
-                        foreach($catalogue_list as $item){
-                    ?>
-                    <tr>
-                        <td><?= $item->ID?></td>
-                        <td><a class="p-2" href="chinh-sua-catalogue/<?= $item->ID?>"><?= $item->Name?></a></td>
-                        <td><?= $item->Parent?></td>
-                        <td>
-                            <a class="p-2" href="chinh-sua-catalogue/<?= $item->ID?>"><i class="fas fa-edit"></i></a>
-                            <a class="p-2 btn-xoa" href="javascript:" maso="<?= $item->ID; ?>" link="<?= base_url('admin/catalogue/xoa')?>" link_base="<?= 'admin/danh-sach-catalogue.html'; ?>" ><i class="fas fa-trash-alt"></i></a>
+                    foreach($data as $item){
+                        ?>
+                        <tr>
+                            <td><?= $item->ID?></td>
+                            <td><a class="p-2" href="chinh-sua-catalogue/<?= $item->ID?>"><?= $item->Name?></a></td>
+                            <td><?= $item->Parent?></td>
+                            <td>
+                                <a class="p-2" href="chinh-sua-catalogue/<?= $item->ID?>"><i class="fas fa-edit"></i></a>
+                                <a class="p-2 btn-xoa" href="javascript:" maso="<?= $item->ID; ?>" link="<?= base_url('admin/catalogue/xoa')?>" link_base="<?= 'admin/danh-sach-catalogue.html'; ?>" ><i class="fas fa-trash-alt"></i></a>
 
-                        </td>
-                    </tr>
+                            </td>
+                        </tr>
 
                     <?php }?>
                     </tbody>

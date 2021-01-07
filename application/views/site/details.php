@@ -61,32 +61,32 @@
             </div>
             
           </div>
-          <div class="col-sm-12 margin_bottom ttnb_box">
-            <h4 class="header-title">Tin Tức Nổi Bật</h4>
-            <div class="border-square">
-                <ul>
-                    <li>
-                        <a href="" >
-                            <img src="<?php echo base_url()?>public/images/tintuc/mini/1111e-7315.jpg" alt="Thiết kế showroom trưng bày cho khách hàng mới." />
-                            <p>Thiết kế showroom trưng bày cho khách hàng mới.</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" >
-                            <img src="<?php echo base_url()?>public/images/tintuc/mini/1111e-7315.jpg" alt="Thiết kế showroom trưng bày cho khách hàng mới." />
-                            <p>Thiết kế showroom trưng bày cho khách hàng mới.</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" >
-                            <img src="<?php echo base_url()?>public/images/tintuc/mini/1111e-7315.jpg" alt="Thiết kế showroom trưng bày cho khách hàng mới." />
-                            <p>Thiết kế showroom trưng bày cho khách hàng mới.</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-          </div>
+<!--          <div class="col-sm-12 margin_bottom ttnb_box">-->
+<!--            <h4 class="header-title">Tin Tức Nổi Bật</h4>-->
+<!--            <div class="border-square">-->
+<!--                <ul>-->
+<!--                    <li>-->
+<!--                        <a href="" >-->
+<!--                            <img src="--><?php //echo base_url()?><!--public/images/tintuc/mini/1111e-7315.jpg" alt="Thiết kế showroom trưng bày cho khách hàng mới." />-->
+<!--                            <p>Thiết kế showroom trưng bày cho khách hàng mới.</p>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="" >-->
+<!--                            <img src="--><?php //echo base_url()?><!--public/images/tintuc/mini/1111e-7315.jpg" alt="Thiết kế showroom trưng bày cho khách hàng mới." />-->
+<!--                            <p>Thiết kế showroom trưng bày cho khách hàng mới.</p>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="" >-->
+<!--                            <img src="--><?php //echo base_url()?><!--public/images/tintuc/mini/1111e-7315.jpg" alt="Thiết kế showroom trưng bày cho khách hàng mới." />-->
+<!--                            <p>Thiết kế showroom trưng bày cho khách hàng mới.</p>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--            -->
+<!--          </div>-->
         </div>
       </div>
       <div class="col-sm-7 col-lg-9">
@@ -106,7 +106,7 @@
                     </li>
             </ul>
             <div class="content_product">
-                <div class="des-product col-xs-12 col-sm-6 col-md-6 col-lg-5">
+                <div class="des-product col-md-12 col-lg-5">
                     <div class="picZoomer">
                         <img src="<?php echo base_url()?>uploads/sanpham/<?php echo $san_pham->Images;?>" height="320" width="320" alt="">
                     </div>
@@ -118,7 +118,7 @@
                         
                     </ul>
                 </div>
-                <ul class="des-product col-xs-12 col-sm-6 col-md-6 col-lg-7">
+                <ul class="des-product col-md-12 col-lg-7">
                     <h1><?php echo $san_pham->Name;?></h1>
                    
                     <li class="li_pr">
@@ -144,7 +144,7 @@
                     </div>
                   </nav>
                   <div class="tab-content" id="nav-tabContent">
-                      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                      <div class="tab-pane fade show active des_sapham" id="nav-home " role="tabpanel" aria-labelledby="nav-home-tab">
                           <?php echo $san_pham->Description;?>
                       </div>
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
@@ -165,7 +165,7 @@
                 <div class="clear"></div>
             </div>
             
-            <div class="col-sm-3 product_item">
+            <div class="col-sm2 col-md-6 col-lg-4 col-xl-3 product_item">
                 <div class="pro_item_content">
                     <a class="img_pro" title=""><img class="transition" src="<?php echo base_url()?>public/images/products/lkbc04-1142.jpg" width="100%" /></a>
                 
@@ -178,9 +178,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3 product_item">
+            <div class="col-sm2 col-md-6 col-lg-4 col-xl-3 product_item">
                 <div class="pro_item_content">
-                    <a class="img_" title=""><img class="transition" src="<?php echo base_url()?>public/images/products/lkbc04-1142.jpg" width="100%" /></a>
+                    <a class="img_" title=""><img class="transition" src="<?php echo base_url()?>public/images/products/lkbc04-1142.jpg" /></a>
                 
                     <a href="" title="">ABCE</a>
                     <div class="detail_price">
@@ -191,9 +191,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3 product_item">
+            <div class="col-sm2 col-md-6 col-lg-4 col-xl-3 product_item">
                 <div class="pro_item_content">
-                    <a class="img_" title=""><img class="transition" src="<?php echo base_url()?>public/images/products/lkbc04-1142.jpg" width="100%" /></a>
+                    <a class="img_" title=""><img class="transition" src="<?php echo base_url()?>public/images/products/lkbc04-1142.jpg" /></a>
                 
                     <a href="" title="">ABCE</a>
                     <div class="detail_price">
@@ -205,9 +205,9 @@
                 </div>
                 
             </div>
-            <div class="col-sm-3 product_item">
+            <div class="col-sm2 col-md-6 col-lg-4 col-xl-3 product_item">
                 <div class="pro_item_content">
-                    <a class="img_" title=""><img class="transition" src="<?php echo base_url()?>public/images/products/lkbc04-1142.jpg" width="100%" /></a>
+                    <a class="img_" title=""><img class="transition" src="<?php echo base_url()?>public/images/products/lkbc04-1142.jpg"/></a>
                 
                     <a href="" title="">ABCE</a>
                     <div class="detail_price">
@@ -218,9 +218,9 @@
                     </div>
                 </div>
             </div>
-              <div class="col-sm-3 product_item">
+              <div class="col-sm2 col-md-6 col-lg-4 col-xl-3 product_item">
                 <div class="pro_item_content">
-                    <a class="transition" title="lkbc04-1142"><img class="transition" src="<?php echo base_url()?>public/images/products/lkbc04-1142.jpg" width="100%" /></a>
+                    <a class="transition" title="lkbc04-1142"><img class="transition" src="<?php echo base_url()?>public/images/products/lkbc04-1142.jpg" /></a>
                 
                     <a href="" title="ABCE">ABCE</a>
                     <div class="detail_price">
