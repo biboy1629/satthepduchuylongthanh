@@ -18,13 +18,19 @@ class Loaisanpham_model extends MY_Model {
     function get_all($input){
         return $this->get_list($input);
     }
+    function getAllCatalogue(){
+
+        return $this->db->query('SELECT * FROM tbl_'.$this->table.' WHERE Type IN (3,4)')->result();
+
+    }
     function getParent($id=null){
         return $this->get_list(['where'=>['Parent'=>$id],'order'=>['ID','ASC']]);
     }
     function checkLoaiSanPhamExist($name='',$id =null){
         if(!empty($id)){
-            return $this->db->query('SELECT * FROM tbl_loaisanpham WHERE name LIKE "%'.$name.'%" AND ID != '.$id)->result();
+            return $this->db->query('SELECT * FROM tbl_loaisanpham WHERE name LIKE "'.$name.'" AND ID != '.$id)->result();
         }else{
+
             $this->db->where('Name',$name);
             $query = $this->db->get($this->table);
             return $query->row();
@@ -59,8 +65,15 @@ class Loaisanpham_model extends MY_Model {
         return $this->db-$this->query($query);
     }
     function getLoaisanphamcon($type=null, $id=null){
-        return $this->db->query('SELECT * FROM tbl_loaisanpham WHERE Type ='.$type.' AND ID !='.$id)->result();
-//        return $this->get_list(['where'=>['Type'=>$type]]);
+        if(!empty($id)){
+            return $this->db->query('SELECT * FROM tbl_loaisanpham WHERE Type ='.$type.' AND ID !='.$id)->result();
+        }elseif(!empty($type)){
+            return $this->db->query('SELECT * FROM tbl_loaisanpham WHERE Type ='.$type)->result();
+        }else{
+            return null;
+        }
+
+
 
     }
     function get_childs_catalogue($parent=null){

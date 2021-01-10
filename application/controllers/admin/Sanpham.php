@@ -79,7 +79,7 @@ class Sanpham extends MY_Controller
 
         $this->data  = array();
         $this->data['temp'] = 'admin/admin/products_add';
-        $this->data['loai_san_pham'] = $this->loaisanpham_model->get_loai_san_pham();
+        $this->data['loai_san_pham'] = $this->loaisanpham_model->getLoaisanphamcon(1);
 
         $this->load->view('admin/layout',$this->data);
 
@@ -156,7 +156,7 @@ class Sanpham extends MY_Controller
 
             $this->data['temp'] = 'admin/admin/product_edit';
             $sanpham_detail = $this->sanpham_model->getSanphamDetail($id);
-            $this->data['loai_san_pham'] = $this->loaisanpham_model->get_loai_san_pham();
+            $this->data['loai_san_pham'] = $this->loaisanpham_model->getLoaisanphamcon(1);
 
             $this->data['loai_san_pham_con'] = $this->loaisanpham_model->get_lists_catelog_con($sanpham_detail->Loai_san_pham);
             $this->data['data'] =$sanpham_detail;

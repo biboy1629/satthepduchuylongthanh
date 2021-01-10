@@ -5,32 +5,32 @@
     <?php echo "<p style='color: #aa1111'>".validation_errors()."</p>"; ?>
 
     <?php
-        foreach($_SESSION['message'] as $item){
-            echo $item;
-        }
+    foreach($_SESSION['message'] as $item){
+        echo $item;
+    }
 
     ?>
 
     <form method="post" enctype="multipart/form-data" action="them-moi-catalogue.html">
-<!--        <div class="form-group">-->
-<!--            <label for="pwd">Loại Cha:</label>-->
-<!--            <select name="Parent" class="form-control catalog_parent">-->
-<!--                --><?php
-//                foreach ($loai_cha as $item){
-//                    echo '<option value="'.$item->ID.'">'.$item->Name.'</option>';
-//                }
-//                ?>
-<!---->
-<!--            </select>-->
-<!--        </div>-->
+        <!--        <div class="form-group">-->
+        <!--            <label for="pwd">Loại Cha:</label>-->
+        <!--            <select name="Parent" class="form-control catalog_parent">-->
+        <!--                --><?php
+        //                foreach ($loai_cha as $item){
+        //                    echo '<option value="'.$item->ID.'">'.$item->Name.'</option>';
+        //                }
+        //                ?>
+        <!---->
+        <!--            </select>-->
+        <!--        </div>-->
         <div class="form-group form-catalog-childs">
             <label for="pwd">List Danh Mục Con</label>
             <select name="parent" class="form-control">
                 <option value="1">None</option>
                 <?php
-                    foreach ($loai_cha as $item){
-                        echo '<option value="'.$item->ID.'">'.$item->Name.'</option>';
-                    }
+                foreach ($loai_cha as $item){
+                    echo '<option value="'.$item->ID.'">'.$item->Name.'</option>';
+                }
                 ?>
             </select>
         </div>

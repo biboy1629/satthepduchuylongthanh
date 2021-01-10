@@ -62,17 +62,29 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
           <span>Sản Phẩm</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="danh-sach-san-pham.html">Danh Sách</a>
             <a class="collapse-item" href="them-moi-san-pham.html">Thêm Mới</a>
           </div>
         </div>
       </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Danh Mục</span>
+            </a>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="danh-sach-danh-muc.html">Danh Sách</a>
+                    <a class="collapse-item" href="them-moi-danh-muc.html">Thêm Mới</a>
+                </div>
+            </div>
+        </li>
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-cog"></i>
@@ -483,7 +495,7 @@
 
     });
 
-    var option = $('#loai_cat').val();
+    var option = $('.loai_cat_add').val();
     $.ajax({
         type: 'GET',
         url: 'sanpham/get_catalog_con',
@@ -500,8 +512,7 @@
         }
     });
     $(document).on('change','#loai_cat',function(){
-
-        $("#nhan_hieu").html('<option value="1">None</option>');
+        $('#nhan_hieu').html('');
         var option = $(this).val();
         $.ajax({
             type: 'GET',
@@ -509,16 +520,11 @@
             data: {"id": option },
             dataType: 'json',
             success: function (data) {
-
                 $.each(data, function(index, element) {
                     $("#nhan_hieu").append(new Option(element.Name, element.ID));
-
-                    // var id = element.ID;
-                    // var name = element.Name;
                 });
             }
         });
-        // $("#nhan_hieu")
     })
 
     // $(document).ready(function() {

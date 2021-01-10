@@ -16,22 +16,22 @@
             <input type="text" class="form-control" name="Name" id="usr" value="<?= $data->Name;?>" >
         </div>
 
-<!--        <div class="form-group">-->
-<!--            <label for="pwd">Loại Cha:</label>-->
-<!--            <select name="Parent" class="form-control catalog_parent">-->
-<!--                --><?php
-//                foreach ($loai_cha as $item){
-//                    if($data->Parent == $item->ID){
-//                        echo '<option selected value="'.$item->ID.'">'.$item->Name.'</option>';
-//                    }else{
-//                        echo '<option selected value="'.$item->ID.'">'.$item->Name.'</option>';
-//                    }
-//
-//                }
-//                ?>
-<!---->
-<!--            </select>-->
-<!--        </div>-->
+        <!--        <div class="form-group">-->
+        <!--            <label for="pwd">Loại Cha:</label>-->
+        <!--            <select name="Parent" class="form-control catalog_parent">-->
+        <!--                --><?php
+        //                foreach ($loai_cha as $item){
+        //                    if($data->Parent == $item->ID){
+        //                        echo '<option selected value="'.$item->ID.'">'.$item->Name.'</option>';
+        //                    }else{
+        //                        echo '<option selected value="'.$item->ID.'">'.$item->Name.'</option>';
+        //                    }
+        //
+        //                }
+        //                ?>
+        <!---->
+        <!--            </select>-->
+        <!--        </div>-->
         <div class="form-group">
             <label for="pwd">Loại Cha Cấp 2:</label>
             <select name="parent" class="form-control">

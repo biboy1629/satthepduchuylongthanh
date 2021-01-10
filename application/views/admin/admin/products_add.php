@@ -11,7 +11,7 @@
         }
 
     ?>
-
+    <h1 class="h3 mb-2 text-gray-800">Thêm mới sản phẩm</h1>
     <form method="post" enctype="multipart/form-data" action="them-moi-san-pham.html">
         <div class="form-group">
             <label for="usr">Tên Sản Phẩm(*): <?php echo "<p style='color: #aa1111'>".validation_errors("Name")."</p>"; ?></label>

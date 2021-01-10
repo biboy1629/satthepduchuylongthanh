@@ -11,7 +11,7 @@
     }
 
     ?>
-
+    <h1 class="h3 mb-2 text-gray-800">Cập nhật sản phẩm</h1>
     <form method="post" enctype="multipart/form-data" action="sua-san-pham/<?= $data->ID; ?>">
         <div class="form-group">
             <label for="usr">Tên Sản Phẩm(*): <?php echo "<p style='color: #aa1111'>".validation_errors("Name")."</p>"; ?></label>
@@ -24,7 +24,7 @@
         <div class="form-group">
             <label for="pwd">Category(*):</label>
             <select name="Loai_san_pham"  class="form-control col-md-3" id="danh_muc">
-                <option value="0">NONE</option>
+
                 <?php
                 foreach ($loai_san_pham as $item){
 

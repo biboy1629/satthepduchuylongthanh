@@ -90,6 +90,10 @@ $route['admin/them-bai-moi.html'] = 'admin/admin/add_new_post';
 $route['admin/them-moi-san-pham.html'] = 'admin/sanpham/them_moi_san_pham';
 $route['admin/sua-san-pham/(:num)'] = 'admin/sanpham/edit';
 
+$route['admin/danh-sach-danh-muc.html'] = 'admin/catalogue/danh_muc_list';
+$route['admin/them-moi-danh-muc.html'] = 'admin/catalogue/danh_muc_manager';
+$route['admin/cap-nhat-danh-muc/(:num)'] = 'admin/catalogue/danh_muc_manager';
+
 $route['admin/danh-sach-catalogue.html'] = 'admin/catalogue/index';
 $route['admin/them-moi-catalogue.html'] = 'admin/catalogue/create';
 $route['admin/chinh-sua-catalogue/(:num)'] = 'admin/catalogue/edit';
